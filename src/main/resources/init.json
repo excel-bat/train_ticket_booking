@@ -1,0 +1,68 @@
+[
+  {
+    "flightNo": "GD2501",
+    "sched": "8:00",
+    "fromAddr": "Xi'an",
+    "toAddr": "Chengdu",
+    "weekDaysRegular": "1100",
+    "weekDaysReward": "800",
+    "weekendsRegular": "900",
+    "weekendsReward": "500",
+    "type": "Positive"
+  },
+  {
+    "flightNo": "GD2606",
+    "sched": "12:25",
+    "fromAddr": "Xi'an",
+    "toAddr": "Chengdu",
+    "weekDaysRegular": "1600",
+    "weekDaysReward": "1100",
+    "weekendsRegular": "600",
+    "weekendsReward": "500",
+    "type": "Positive"
+  },
+  {
+    "flightNo": "GD8732",
+    "sched": "19:30",
+    "fromAddr": "Xi'an",
+    "toAddr": "Chengdu",
+    "weekDaysRegular": "2200",
+    "weekDaysReward": "1000",
+    "weekendsRegular": "1500",
+    "weekendsReward": "400",
+    "type": "Positive"
+  },
+  {
+    "flightNo": "GD2502",
+    "sched": "12:00",
+    "fromAddr": "Chengdu",
+    "toAddr": "Xi'an",
+    "weekDaysRegular": "1700",
+    "weekDaysReward": "800",
+    "weekendsRegular": "900",
+    "weekendsReward": "800",
+    "type": "Negative"
+  },
+  {
+    "flightNo": "GD2607",
+    "sched": "16:25",
+    "fromAddr": "Chengdu",
+    "toAddr": "Xi'an",
+    "weekDaysRegular": "1600",
+    "weekDaysReward": "1100",
+    "weekendsRegular": "600",
+    "weekendsReward": "500",
+    "type": "Negative"
+  },
+  {
+    "flightNo": "GD8733",
+    "sched": "23:30",
+    "fromAddr": "Chengdu",
+    "toAddr": "Xi'an",
+    "weekDaysRegular": "1600",
+    "weekDaysReward": "1500",
+    "weekendsRegular": "1000",
+    "weekendsReward": "400",
+    "type": "Negative"
+  }
+]
