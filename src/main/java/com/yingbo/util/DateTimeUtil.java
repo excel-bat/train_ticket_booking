@@ -23,41 +23,47 @@ import java.util.Locale;
  */
 public class DateTimeUtil {
 
-    public static final DateTimeFormatter FLIGHT_DATE_FORMAT =
-            DateTimeFormat.forPattern("yyyyMMddEE").withLocale(Locale.US);
+  public static final DateTimeFormatter FLIGHT_DATE_FORMAT
+          = DateTimeFormat.forPattern("yyyyMMddEE").withLocale(Locale.US);
 
-    public static final DateTimeFormatter FLIGHT_TIME_FORMAT =
-            DateTimeFormat.forPattern("HH:mm");
+  public static final DateTimeFormatter FLIGHT_TIME_FORMAT = DateTimeFormat.forPattern("HH:mm");
 
+  public static final String PATTERN = "yyyyMMdd";
 
-    public static final String pattern = "yyyyMMdd";
-    private static Logger LOG = LoggerFactory.getLogger(DateTimeUtil.class);
+  private static Logger LOG = LoggerFactory.getLogger(DateTimeUtil.class);
 
-    /**
-     * 是否是工作日.
-     *
-     * @param date
-     * @return
-     */
-    public static boolean isWeekDay(String date) {
-        DateTime dt = FLIGHT_DATE_FORMAT.parseDateTime(date);
-        if (!date.contains(dt.toString(pattern))) {
-            LOG.error("date time not equals weekday!");
-            throw new DateTimeException("date time not equals weekday!");
-        }
-
-        DayOfWeek day = DayOfWeek.of(dt.getDayOfWeek());
-        if (DayOfWeek.SUNDAY.equals(day) || DayOfWeek.SATURDAY.equals(day)) {
-            return false;
-        } else {
-            return true;
-        }
+  /**
+   * 是否是工作日.
+   *
+   * @param date date
+   * @return
+   */
+  public static boolean isWeekDay(String date) {
+    DateTime dt = FLIGHT_DATE_FORMAT.parseDateTime(date);
+    if (!date.contains(dt.toString(PATTERN))) {
+      LOG.error("date time not equals weekday!");
+      throw new DateTimeException("date time not equals weekday!");
     }
 
-
-    public static int compareCloseTime(String sched, String sched1) {
-        DateTime d1 = FLIGHT_TIME_FORMAT.parseDateTime(sched);
-        DateTime d2 = FLIGHT_TIME_FORMAT.parseDateTime(sched1);
-        return d2.minusHours(24).compareTo(d1.minusHours(24));
+    DayOfWeek day = DayOfWeek.of(dt.getDayOfWeek());
+    if (DayOfWeek.SUNDAY.equals(day) || DayOfWeek.SATURDAY.equals(day)) {
+      return false;
+    } else {
+      return true;
     }
+  }
+
+
+  /**
+   * 比较哪个时间接近12：00PM.
+   *
+   * @param sched  sched
+   * @param sched1 shec1
+   * @return
+   */
+  public static int compareCloseTime(String sched, String sched1) {
+    DateTime d1 = FLIGHT_TIME_FORMAT.parseDateTime(sched);
+    DateTime d2 = FLIGHT_TIME_FORMAT.parseDateTime(sched1);
+    return d2.minusHours(24).compareTo(d1.minusHours(24));
+  }
 }

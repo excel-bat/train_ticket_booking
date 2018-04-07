@@ -15,8 +15,8 @@ import com.yingbo.strategy.PackageStragegy;
  */
 public class DefaultPackageStrategy implements PackageStragegy {
 
-    @Override
-    public String clac(Customer customer) {
-        throw new UnsupportedOperationException("default package strategy is not support!");
-    }
+  @Override
+  public String clac(Customer customer) {
+    throw new UnsupportedOperationException("default package strategy is not support!");
+  }
 }

@@ -1,6 +1,7 @@
 /**
  * Copyright (C) 2008-2018 All Rights Reserved.
  */
+
 package com.yingbo.business;
 
 import com.google.common.base.Function;
@@ -18,28 +19,28 @@ import com.yingbo.util.DateTimeUtil;
 public class RegularCustomer extends Customer {
 
 
-    @Override
-    public String queryFlightInfo() {
-        packageStragegy = new LowPricePackageStrategy();
-        return packageStragegy.clac(this);
-    }
+  @Override
+  public String queryFlightInfo() {
+    packageStragegy = new LowPricePackageStrategy();
+    return packageStragegy.clac(this);
+  }
 
-    @Override
-    public Ordering<FlightInfo> generateOrder(String dates) {
-        if (DateTimeUtil.isWeekDay(dates)) {
-            return Ordering.natural().nullsLast().onResultOf(new Function<FlightInfo, Double>() {
-                public Double apply(FlightInfo foo) {
-                    return foo.weekDaysRegular;
-                }
-            });
-        } else {
-            return Ordering.natural().nullsLast().onResultOf(new Function<FlightInfo, Double>() {
-                public Double apply(FlightInfo foo) {
-                    return foo.weekendsRegular;
-                }
-            });
-
+  @Override
+  public Ordering<FlightInfo> generateOrder(String dates) {
+    if (DateTimeUtil.isWeekDay(dates)) {
+      return Ordering.natural().nullsLast().onResultOf(new Function<FlightInfo, Double>() {
+        public Double apply(FlightInfo foo) {
+          return foo.weekDaysRegular;
         }
+      });
+    } else {
+      return Ordering.natural().nullsLast().onResultOf(new Function<FlightInfo, Double>() {
+        public Double apply(FlightInfo foo) {
+          return foo.weekendsRegular;
+        }
+      });
 
     }
+
+  }
 }

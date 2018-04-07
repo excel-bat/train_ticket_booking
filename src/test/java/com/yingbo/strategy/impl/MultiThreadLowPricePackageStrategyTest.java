@@ -12,9 +12,9 @@ import org.junit.Test;
 public class MultiThreadLowPricePackageStrategyTest {
 
 
-    @Test
-    public void shouldClacLowPrice() {
+  @Test
+  public void shouldClacLowPrice() {
 
-    }
+  }
 
 }
