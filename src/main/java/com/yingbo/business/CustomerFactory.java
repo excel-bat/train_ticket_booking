@@ -1,7 +1,7 @@
 /**
  * Copyright (C) 2008-2018 All Rights Reserved.
  */
-package business;
+package com.yingbo.business;
 
 import com.google.common.base.CaseFormat;
 import org.slf4j.Logger;
@@ -30,6 +30,7 @@ public final class CustomerFactory {
      */
     public static Customer buildCustomer(String customerType, String departingDate, String returnningDate) {
         Customer customer = new Customer();
+
         try {
             Class<?> customerClass = Thread.currentThread().getContextClassLoader().loadClass(generateClazzName(customerType));
             customer = (Customer) customerClass.newInstance();
@@ -47,7 +48,8 @@ public final class CustomerFactory {
 
     public static String generateClazzName(String customerType) {
         //这里用到CaseFormat，把方法名转换成驼峰标示（当然这里也可以自己动手去处理字符串）
-        return CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, customerType) + "Customer";
+        //TODO 包名
+        return "com.yingbo.business." + CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, customerType) + "Customer";
     }
 
 }

@@ -1,4 +1,4 @@
-package util;
+package com.yingbo.util;
 
 import org.junit.Test;
 
@@ -62,5 +62,19 @@ public class DateTimeUtilTest {
         boolean res = DateTimeUtil.isWeekDay(departingDate);
         //then
         assertTrue(res);
+    }
+
+
+    /**
+     * Method: compareCloseTime(String sched, String sched1)
+     */
+    @Test
+    public void testCompareCloseTime() {
+
+        //when
+        int c = DateTimeUtil.compareCloseTime("8:25", "23:10");
+        //then
+        assertTrue(c < 0);
+
     }
 }

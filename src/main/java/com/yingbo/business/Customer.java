@@ -1,10 +1,12 @@
 /**
  * Copyright (C) 2008-2018 All Rights Reserved.
  */
-package business;
+package com.yingbo.business;
 
-import strategy.PackageStragegy;
-import strategy.impl.DefaultPackageStrategy;
+import com.google.common.collect.Ordering;
+import com.yingbo.model.FlightInfo;
+import com.yingbo.strategy.PackageStragegy;
+import com.yingbo.strategy.impl.DefaultPackageStrategy;
 
 /**
  * @author shanyingbo
@@ -78,6 +80,8 @@ public class Customer {
         return packageStragegy.clac(this);
     }
 
-    ;
+    public Ordering<FlightInfo> generateOrder(String dates) {
+        return null;
+    }
 
 }

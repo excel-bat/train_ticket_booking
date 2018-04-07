@@ -1,3 +1,5 @@
+package com.yingbo;
+
 import org.junit.Test;
 
 public class BootStrapTest {
@@ -6,8 +8,5 @@ public class BootStrapTest {
     public void main() {
     }
 
-    @Test
-    public void init() {
-        BootStrap.init();
-    }
+
 }

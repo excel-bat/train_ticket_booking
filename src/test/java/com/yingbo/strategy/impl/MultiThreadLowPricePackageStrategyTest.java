@@ -1,7 +1,7 @@
 /**
  * Copyright (C) 2008-2018 All Rights Reserved.
  */
-package strategy.impl;
+package com.yingbo.strategy.impl;
 
 import org.junit.Test;
 

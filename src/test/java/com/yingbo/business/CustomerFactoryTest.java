@@ -1,4 +1,4 @@
-package business;
+package com.yingbo.business;
 
 import org.junit.Test;
 

@@ -1,9 +1,7 @@
 /**
  * Copyright (C) 2008-2018 All Rights Reserved.
  */
-package model;
-
-import java.math.BigDecimal;
+package com.yingbo.model;
 
 /**
  * 航班基本信息
@@ -14,48 +12,47 @@ import java.math.BigDecimal;
 public class FlightInfo {
 
     private String flightNo;
-    ;
     private String sched;
     private String fromAddr;
     private String toAddr;
     private Type type;
-    private BigDecimal weekDaysReward;
-    private BigDecimal weekDaysRegular;
-    private BigDecimal weekendsRegular;
-    private BigDecimal weekendsReward;
+    public Double weekDaysReward;
+    public Double weekDaysRegular;
+    public Double weekendsRegular;
+    public Double weekendsReward;
 
-    public BigDecimal getWeekDaysReward() {
+    public Double getWeekDaysReward() {
         return weekDaysReward;
     }
 
-    public FlightInfo setWeekDaysReward(BigDecimal weekDaysReward) {
+    public FlightInfo setWeekDaysReward(Double weekDaysReward) {
         this.weekDaysReward = weekDaysReward;
         return this;
     }
 
-    public BigDecimal getWeekDaysRegular() {
+    public Double getWeekDaysRegular() {
         return weekDaysRegular;
     }
 
-    public FlightInfo setWeekDaysRegular(BigDecimal weekDaysRegular) {
+    public FlightInfo setWeekDaysRegular(Double weekDaysRegular) {
         this.weekDaysRegular = weekDaysRegular;
         return this;
     }
 
-    public BigDecimal getWeekendsRegular() {
+    public Double getWeekendsRegular() {
         return weekendsRegular;
     }
 
-    public FlightInfo setWeekendsRegular(BigDecimal weekendsRegular) {
+    public FlightInfo setWeekendsRegular(Double weekendsRegular) {
         this.weekendsRegular = weekendsRegular;
         return this;
     }
 
-    public BigDecimal getWeekendsReward() {
+    public Double getWeekendsReward() {
         return weekendsReward;
     }
 
-    public FlightInfo setWeekendsReward(BigDecimal weekendsReward) {
+    public FlightInfo setWeekendsReward(Double weekendsReward) {
         this.weekendsReward = weekendsReward;
         return this;
     }

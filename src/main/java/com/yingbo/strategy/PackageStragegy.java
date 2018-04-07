@@ -1,9 +1,9 @@
 /**
  * Copyright (C) 2004-2018 All Rights Reserved.
  */
-package strategy;
+package com.yingbo.strategy;
 
-import business.Customer;
+import com.yingbo.business.Customer;
 
 /**
  * @author shanyingbo
