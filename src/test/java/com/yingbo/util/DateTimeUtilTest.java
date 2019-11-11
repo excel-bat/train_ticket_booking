@@ -74,7 +74,7 @@ public class DateTimeUtilTest {
     //when
     int c = DateTimeUtil.compareCloseTime("8:25", "23:10");
     //then
-    assertTrue(c < 0);
+    assertTrue(c > 0);
 
   }
 }

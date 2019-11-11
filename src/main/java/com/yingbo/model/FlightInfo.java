@@ -4,13 +4,17 @@
 
 package com.yingbo.model;
 
+import com.yingbo.util.DateTimeUtil;
+
+import java.util.Comparator;
+
 /**
  * 航班基本信息.
  *
  * @author shanyingbo
  * @version $Id FlightInfo.java, v 0.1 2018-04-06 下午12:22 shanyingbo Exp $$
  */
-public class FlightInfo {
+public class FlightInfo  {
 
   public Double weekDaysReward;
   public Double weekDaysRegular;
@@ -113,6 +117,7 @@ public class FlightInfo {
             ", type=" + type +
             '}';
   }
+
 
   public enum Type {
     //正向航班

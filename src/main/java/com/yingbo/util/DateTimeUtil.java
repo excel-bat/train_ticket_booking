@@ -66,4 +66,6 @@ public class DateTimeUtil {
     DateTime d2 = FLIGHT_TIME_FORMAT.parseDateTime(sched1);
     return d2.minusHours(24).compareTo(d1.minusHours(24));
   }
+
+
 }

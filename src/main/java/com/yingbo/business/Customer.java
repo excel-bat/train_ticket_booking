@@ -80,6 +80,7 @@ public class Customer {
    */
   public String queryFlightInfo() {
     packageStragegy = new DefaultPackageStrategy();
+
     return packageStragegy.clac(this);
   }
 
